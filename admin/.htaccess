@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteRule ^dashboard$ dashboard.php
+RewriteRule ^login$ index.php
+RewriteRule ^services$ services.php
+RewriteRule ^blog$ editor.php
