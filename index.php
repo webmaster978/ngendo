@@ -1,3 +1,6 @@
+<?php require('config/database.php');
+$s = $db->query("SELECT * FROM service");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,6 +52,7 @@
                                         <p><a href="#" class="btn btn-white p-4 py-3">Get Started <span
                                                     class="ion-ios-arrow-round-forward"></span></a></p>
                                     </div>
+                                    l
                                 </div>
                             </div>
                         </div>
@@ -57,7 +61,7 @@
             </div>
         </div>
     </section>
-    <section class="ftco-section ftco-image img" style="background-image: url(images/1.png);">
+    <section class="ftco-section ftco-image img" style="background-image: url(images/4.png);">
         <div class="container">
             <div class="row justify-content-end">
                 <div class="col-md-6 heading-section" data-aos="fade-up" data-aos-duration="1000">
@@ -66,15 +70,7 @@
                     <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
                         live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics,
                         a large language ocean.</p>
-                    <a href="https://www.youtube.com/watch?v=9ZZ7pq331Dc"
-                        class="d-flex glightbox pt-4 align-items-center">
-                        <div class="icon">
-                            <span class="fa fa-play"></span>
-                        </div>
-                        <div class="text ps-4">
-                            <span>Watch Video</span>
-                        </div>
-                    </a>
+
                 </div>
             </div>
         </div>
@@ -84,109 +80,31 @@
             <div class="row justify-content-center">
                 <div class="col-lg-5 heading-section text-center mb-5" data-aos="fade-up" data-aos-duration="1000">
                     <span class="subheading">Services</span>
-                    <h2 class="mb-4">Our Exclusive Services We Offer For You</h2>
+                    <h2 class="mb-4">Nos Services Exclusives Que Nous Avons</h2>
                 </div>
             </div>
+
             <div class="row justify-content-center">
+                <?php while ($g = $s->fetch()) { ?>
                 <div class="col-md-3 text-center d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100"
                     data-aos-duration="1000">
                     <div class="flow-wrap flow-wrap-right">
                         <div class="icon">
-                            <span class="flaticon-accounting"></span>
+                            <img class="im" src="images/<?= $g['image']; ?>">
+                            <!-- <span class="flaticon-accounting"></span> -->
                         </div>
                         <div class="text">
-                            <h2>Financial Planning</h2>
-                            <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia.</p>
+                            <h2><?= $g['titre']; ?></h2>
+                            <p class="mb-4"><?= $g['designation']; ?></p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 text-center d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100"
-                    data-aos-duration="1000">
-                    <div class="flow-wrap">
-                        <div class="icon">
-                            <span class="flaticon-financial"></span>
-                        </div>
-                        <div class="text">
-                            <h2>Investments Management</h2>
-                            <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 text-center d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100"
-                    data-aos-duration="1000">
-                    <div class="flow-wrap">
-                        <div class="icon">
-                            <span class="flaticon-recession"></span>
-                        </div>
-                        <div class="text">
-                            <h2>Business Loan</h2>
-                            <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 text-center d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100"
-                    data-aos-duration="1000">
-                    <div class="flow-wrap">
-                        <div class="icon">
-                            <span class="flaticon-tax"></span>
-                        </div>
-                        <div class="text">
-                            <h2>Taxes Consulting</h2>
-                            <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 text-center d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100"
-                    data-aos-duration="1000">
-                    <div class="flow-wrap">
-                        <div class="icon">
-                            <span class="flaticon-insurance"></span>
-                        </div>
-                        <div class="text">
-                            <h2>Insurance Consulting</h2>
-                            <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 text-center d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100"
-                    data-aos-duration="1000">
-                    <div class="flow-wrap">
-                        <div class="icon">
-                            <span class="flaticon-retirement-plan"></span>
-                        </div>
-                        <div class="text">
-                            <h2>Retirement Planning</h2>
-                            <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 text-center d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100"
-                    data-aos-duration="1000">
-                    <div class="flow-wrap">
-                        <div class="icon">
-                            <span class="flaticon-risk"></span>
-                        </div>
-                        <div class="text">
-                            <h2>Risk Management</h2>
-                            <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 text-center d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100"
-                    data-aos-duration="1000">
-                    <div class="flow-wrap">
-                        <div class="icon">
-                            <span class="flaticon-technology"></span>
-                        </div>
-                        <div class="text">
-                            <h2>Technology Consulting</h2>
-                            <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia.</p>
-                        </div>
-                    </div>
-                </div>
+                <?php } ?>
             </div>
+
         </div>
     </section>
+
     <section class="ftco-gallery ftco-no-pb ftco-section">
         <div class="container-xl-fluid">
             <div class="row justify-content-center">
@@ -262,14 +180,14 @@
                 </div>
                 <div class="col-sm-6 col-md-6 col-lg-3 d-flex align-items-stretch">
                     <div class="counter-wrap-2" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-                        <h2 class="number"><span class="countup">9200</span></h2>
-                        <span class="caption">Satisfied Customers </span>
+                        <h2 class="number"><span class="countup">200</span></h2>
+                        <span class="caption">Client satusfait </span>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-6 col-lg-3 d-flex align-items-stretch">
                     <div class="counter-wrap-2" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-                        <h2 class="number"><span class="countup">5800</span></h2>
-                        <span class="caption">Project Completed</span>
+                        <h2 class="number"><span class="countup">80</span></h2>
+                        <span class="caption">Realisation</span>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-6 col-lg-3 d-flex align-items-stretch">
@@ -626,4 +544,4 @@
 
 <!-- Mirrored from preview.colorlib.com/theme/unioncorp/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 20 Apr 2021 22:06:17 GMT -->
 
-</html> 
+</html>
