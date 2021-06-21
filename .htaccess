@@ -1,0 +1,7 @@
+RewriteEngine on
+RewriteRule ^acceuil$ index.php
+RewriteRule ^blog$ blog.php
+RewriteRule ^about$ about.php
+RewriteRule ^services$ services.php
+RewriteRule ^contact$ contact.php
+RewriteRule ^oeuvres$ work.php
