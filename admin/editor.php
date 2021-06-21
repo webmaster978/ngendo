@@ -49,6 +49,7 @@
                             </ol>
                         </div>
                     </div>
+
                 </div><!-- /.container-fluid -->
             </section>
 
@@ -60,13 +61,17 @@
                             <div class="card-header">
                                 <h3 class="card-title">
                                     Summernote
+
                                 </h3>
                             </div>
                             <!-- /.card-header -->
-                            <div class="card-body">
-                                <textarea class="form-control" rows="10" id="summernote">
 
-              </textarea>
+                            <div class="card-body">
+                                <input type="file" name="" id="">
+
+                                <textarea class="form-control" rows="100" id="summernote">
+
+                                 </textarea>
                             </div>
 
                         </div>

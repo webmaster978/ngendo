@@ -12,15 +12,15 @@
 
 <body>
     <?php include 'partials/_menu.php' ?>
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_3.jpg');">
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/0.png');">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text align-items-end justify-content-center">
                 <div class="col-md-9 text-center mb-5">
-                    <p class="breadcrumbs"><span class="me-2"><a href="index.html">Home <i
-                                    class="fa fa-chevron-right"></i></a></span> <span>About us <i
+                    <p class="breadcrumbs"><span class="me-2"><a href="acceuil">Acceuil <i
+                                    class="fa fa-chevron-right"></i></a></span> <span>A propos <i
                                 class="fa fa-chevron-right"></i></span></p>
-                    <h1 class="mb-0 bread">About Us</h1>
+                    <h1 class="mb-0 bread">A propos</h1>
                 </div>
             </div>
         </div>
@@ -30,7 +30,7 @@
             <div class="row g-lg-5">
                 <div class="col-lg-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100"
                     data-aos-duration="1000">
-                    <div class="img w-100" style="background-image: url(images/about.jpg);">
+                    <div class="img w-100" style="background-image: url(images/j.png);">
                     </div>
                 </div>
                 <div class="col-lg-6 heading-section d-flex align-items-center" data-aos="fade-up" data-aos-delay="200"
@@ -145,66 +145,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="ftco-section ftco-image img" style="background-image: url(images/bg_4.jpg);">
-        <div class="container">
-            <div class="row justify-content-end">
-                <div class="col-md-6 heading-section" data-aos="fade-up" data-aos-duration="1000">
-                    <span class="subheading">About Union Corporation</span>
-                    <h2 class="mb-4">Quality Makes the Belief for Customers</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                        live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics,
-                        a large language ocean.</p>
-                    <a href="https://www.youtube.com/watch?v=9ZZ7pq331Dc"
-                        class="d-flex glightbox pt-4 align-items-center">
-                        <div class="icon">
-                            <span class="fa fa-play"></span>
-                        </div>
-                        <div class="text ps-4">
-                            <span>Watch Video</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="ftco-section-counter img" style="background-image: url(images/bg_3.jpg);">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-6 heading-section heading-section-white text-center mb-5" data-aos="fade-up"
-                    data-aos-duration="1000">
-                    <span class="subheading">Great Reviews for our services</span>
-                    <h2 class="mb-0">Technical Statistics</h2>
-                </div>
-            </div>
-            <div class="row section-counter">
-                <div class="col-sm-6 col-md-6 col-lg-3 d-flex align-items-stretch">
-                    <div class="counter-wrap-2" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-                        <h2 class="number"><span class="countup">60</span></h2>
-                        <span class="caption">Year of Experienced</span>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-3 d-flex align-items-stretch">
-                    <div class="counter-wrap-2" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-                        <h2 class="number"><span class="countup">9200</span></h2>
-                        <span class="caption">Satisfied Customers </span>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-3 d-flex align-items-stretch">
-                    <div class="counter-wrap-2" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-                        <h2 class="number"><span class="countup">5800</span></h2>
-                        <span class="caption">Project Completed</span>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-3 d-flex align-items-stretch">
-                    <div class="counter-wrap-2" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
-                        <h2 class="number"><span class="countup">100</span></h2>
-                        <span class="caption">Get Awards</span>
                     </div>
                 </div>
             </div>

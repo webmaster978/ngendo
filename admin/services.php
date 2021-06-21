@@ -23,6 +23,11 @@ $s = $db->query('SELECT * FROM service');
     <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <style>
+    .jt {
+        height: 100px;
+    }
+    </style>
 
 </head>
 
@@ -30,12 +35,10 @@ $s = $db->query('SELECT * FROM service');
     <div class="wrapper">
 
         <!-- Preloader -->
-        <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
-        </div>
+
 
         <!-- Navbar -->
-
+        <?php include 'part/_nav.php' ?>
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
@@ -87,12 +90,47 @@ $s = $db->query('SELECT * FROM service');
                                 <?php while ($g = $s->fetch()) { ?>
                                 <tbody>
                                     <tr>
+                                        <div class="modal fade" id="modal-default<?= $g['id']; ?>">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Modofier les services</h4>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form action="" method="post">
+                                                            <div class="form-control-groups">
+                                                                <input class="form-control" type="text" name=""
+                                                                    value="<?= $g['titre']; ?>">
+                                                                </br>
+
+                                                                <input class="form-control jt" type="text" name=""
+                                                                    value="<?= $g['designation']; ?>">
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="modal-footer justify-content-between">
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal">Fermer</button>
+                                                        <input class="btn btn-primary" type="submit" value="Modifier">
+                                                    </div>
+                                                </div>
+                                                <!-- /.modal-content -->
+                                            </div>
+                                            <!-- /.modal-dialog -->
+                                        </div>
                                         <td><?= $g['id']; ?></td>
                                         <td><?= $g['titre']; ?>
                                         </td>
                                         <td><?= $g['designation']; ?></td>
 
-                                        <td><button class="btn btn-success">Modifier</button></td>
+                                        <td><button type="button" class="btn btn-success" data-toggle="modal"
+                                                data-target="#modal-default<?= $g['id']; ?>">
+                                                Modifier
+                                            </button></td>
                                     </tr>
                                 </tbody>
                                 <?php } ?>

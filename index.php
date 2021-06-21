@@ -109,8 +109,8 @@ $s = $db->query("SELECT * FROM service");
         <div class="container-xl-fluid">
             <div class="row justify-content-center">
                 <div class="col-lg-5 heading-section text-center mb-5" data-aos="fade-up" data-aos-duration="1000">
-                    <span class="subheading">Case Studies</span>
-                    <h2 class="mb-4">We Take Every Case Studies Very Seriously</h2>
+                    <span class="subheading">Les cas deja traites</span>
+                    <h2 class="mb-4">Nous etudions chaque cas serieusement</h2>
                 </div>
             </div>
             <div class="row g-0">
