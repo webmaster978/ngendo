@@ -5,3 +5,4 @@ RewriteRule ^about$ about.php
 RewriteRule ^services$ services.php
 RewriteRule ^contact$ contact.php
 RewriteRule ^oeuvres$ work.php
+RewriteRule ^blog-detail$ blog-single.php
