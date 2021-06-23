@@ -12,7 +12,7 @@
 
 <body>
     <?php include 'partials/_menu.php' ?>
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_3.jpg');">
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/j.png');">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text align-items-end justify-content-center">
@@ -43,11 +43,11 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-md-3">
                                             <div class="dbox w-100 d-flex align-items-start">
                                                 <div class="text">
                                                     <p><span>Mail:</span>
-                                                    <p>ngendo@gmail.com</p>
+                                                    <p><a href="mailto:jtjoel11@gmail.com">ngendo@gmail.com</a></p>
                                                     </p>
                                                 </div>
                                             </div>

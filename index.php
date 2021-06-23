@@ -1,5 +1,6 @@
 <?php require('config/database.php');
 $s = $db->query("SELECT * FROM service");
+$bb = $db->query("SELECT * FROM blog  ORDER BY id desc LIMIT 4");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -161,7 +162,7 @@ $s = $db->query("SELECT * FROM service");
             </div>
         </div>
     </section>
-    <section class="ftco-section-counter img" style="background-image: url(images/bg_3.jpg);">
+    <section class="ftco-section-counter img" style="background-image: url(images/j.png);">
         <div class="overlay"></div>
         <div class="container">
             <div class="row justify-content-center">
@@ -174,8 +175,8 @@ $s = $db->query("SELECT * FROM service");
             <div class="row section-counter">
                 <div class="col-sm-6 col-md-6 col-lg-3 d-flex align-items-stretch">
                     <div class="counter-wrap-2" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-                        <h2 class="number"><span class="countup">60</span></h2>
-                        <span class="caption">Year of Experienced</span>
+                        <h2 class="number"><span class="countup">5</span></h2>
+                        <span class="caption">Ans d'experience</span>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-6 col-lg-3 d-flex align-items-stretch">
@@ -192,8 +193,8 @@ $s = $db->query("SELECT * FROM service");
                 </div>
                 <div class="col-sm-6 col-md-6 col-lg-3 d-flex align-items-stretch">
                     <div class="counter-wrap-2" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
-                        <h2 class="number"><span class="countup">100</span></h2>
-                        <span class="caption">Get Awards</span>
+                        <h2 class="number"><span class="countup">20</span></h2>
+                        <span class="caption">Merites</span>
                     </div>
                 </div>
             </div>
@@ -437,82 +438,29 @@ $s = $db->query("SELECT * FROM service");
                 </div>
             </div>
             <div class="row justify-content-center">
+                <?php while ($o = $bb->fetch()) { ?>
                 <div class="col-md-6 col-lg-3 d-flex">
+
                     <div class="blog-entry justify-content-end" data-aos="fade-up" data-aos-duration="1000"
                         data-aos-delay="100">
-                        <a href="blog-single.html" class="block-20 img"
-                            style="background-image: url('images/image_1.jpg');">
+                        <a href="blog-detail" class="block-20 img"
+                            style="background-image: url('admin/blogs/<?= $o['avatar']; ?>');">
                         </a>
                         <div class="text">
                             <p class="meta"><span><i class="fa fa-user me-1"></i>Admin</span> <span><i
-                                        class="fa fa-calendar me-1"></i>Jan. 27, 2021</span> <span><a href="#"><i
-                                            class="fa fa-comment me-1"></i> 3 Comments</a></span></p>
-                            <h3 class="heading mb-3"><a href="#">Incorporation is A Big Milestone for Your Business</a>
+                                        class="fa fa-calendar me-1"></i><?= $o['created_at']; ?></span> <span><a
+                                        href="#"><i class="fa fa-comment me-1"></i> 0 Comments</a></span></p>
+                            <h3 class="heading mb-3"><a href="#"><?= $o['titre']; ?></a>
                             </h3>
-                            <p>A small river named Duden flows by their place.</p>
-                            <a href="blog.html"
+                            <p><?= $o['contenue']; ?></p>
+                            <a href="blog-detail"
                                 class="btn-custom d-flex align-items-center justify-content-center"><span
                                     class="fa fa-link"></span></a>
                         </div>
                     </div>
+
                 </div>
-                <div class="col-md-6 col-lg-3 d-flex">
-                    <div class="blog-entry justify-content-end" data-aos="fade-up" data-aos-duration="1000"
-                        data-aos-delay="100">
-                        <a href="blog-single.html" class="block-20 img"
-                            style="background-image: url('images/image_2.jpg');">
-                        </a>
-                        <div class="text">
-                            <p class="meta"><span><i class="fa fa-user me-1"></i>Admin</span> <span><i
-                                        class="fa fa-calendar me-1"></i>Jan. 27, 2021</span> <span><a href="#"><i
-                                            class="fa fa-comment me-1"></i> 3 Comments</a></span></p>
-                            <h3 class="heading mb-3"><a href="#">Incorporation is A Big Milestone for Your Business</a>
-                            </h3>
-                            <p>A small river named Duden flows by their place.</p>
-                            <a href="blog.html"
-                                class="btn-custom d-flex align-items-center justify-content-center"><span
-                                    class="fa fa-link"></span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 d-flex">
-                    <div class="blog-entry justify-content-end" data-aos="fade-up" data-aos-duration="1000"
-                        data-aos-delay="100">
-                        <a href="blog-single.html" class="block-20 img"
-                            style="background-image: url('images/image_3.jpg');">
-                        </a>
-                        <div class="text">
-                            <p class="meta"><span><i class="fa fa-user me-1"></i>Admin</span> <span><i
-                                        class="fa fa-calendar me-1"></i>Jan. 27, 2021</span> <span><a href="#"><i
-                                            class="fa fa-comment me-1"></i> 3 Comments</a></span></p>
-                            <h3 class="heading mb-3"><a href="#">Incorporation is A Big Milestone for Your Business</a>
-                            </h3>
-                            <p>A small river named Duden flows by their place.</p>
-                            <a href="blog.html"
-                                class="btn-custom d-flex align-items-center justify-content-center"><span
-                                    class="fa fa-link"></span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 d-flex">
-                    <div class="blog-entry justify-content-end" data-aos="fade-up" data-aos-duration="1000"
-                        data-aos-delay="100">
-                        <a href="blog-single.html" class="block-20 img"
-                            style="background-image: url('images/image_4.jpg');">
-                        </a>
-                        <div class="text">
-                            <p class="meta"><span><i class="fa fa-user me-1"></i>Admin</span> <span><i
-                                        class="fa fa-calendar me-1"></i>Jan. 27, 2021</span> <span><a href="#"><i
-                                            class="fa fa-comment me-1"></i> 3 Comments</a></span></p>
-                            <h3 class="heading mb-3"><a href="#">Incorporation is A Big Milestone for Your Business</a>
-                            </h3>
-                            <p>A small river named Duden flows by their place.</p>
-                            <a href="blog.html"
-                                class="btn-custom d-flex align-items-center justify-content-center"><span
-                                    class="fa fa-link"></span></a>
-                        </div>
-                    </div>
-                </div>
+                <?php } ?>
             </div>
         </div>
     </section>

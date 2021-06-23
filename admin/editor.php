@@ -40,7 +40,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Text Editors</h1>
+                            <h1>Blogs</h1>
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
@@ -60,18 +60,31 @@
                         <div class="card card-outline card-info">
                             <div class="card-header">
                                 <h3 class="card-title">
-                                    Summernote
+                                    rediger le blog
 
                                 </h3>
                             </div>
                             <!-- /.card-header -->
 
                             <div class="card-body">
-                                <input type="file" name="" id="">
+                                <form action="i.php" method="post" enctype="multipart/form-data">
+                                    <div class=" row">
+                                        <div class="col-6">
+                                            <div class="form-control-groups">
+                                                <input class="form-control" type="text" name="titre" id=""
+                                                    placeholder="titre du blog" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <input type="file" name="img" required>
 
-                                <textarea class="form-control" rows="100" id="summernote">
+                                    <textarea class="form-control" name="contenue" rows="100" id="summernote" required>
 
                                  </textarea>
+                                    <br>
+                                    <input class="btn btn-primary" type="submit" value="Publier">
+                                </form>
                             </div>
 
                         </div>
