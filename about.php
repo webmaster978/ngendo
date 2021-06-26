@@ -30,7 +30,7 @@
             <div class="row g-lg-5">
                 <div class="col-lg-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100"
                     data-aos-duration="1000">
-                    <div class="img w-100" style="background-image: url(images/j.png);">
+                    <div class="img w-100" style="background-image: url(images/boul.jpg);">
                     </div>
                 </div>
                 <div class="col-lg-6 heading-section d-flex align-items-center" data-aos="fade-up" data-aos-delay="200"

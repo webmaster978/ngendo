@@ -1,7 +1,9 @@
+<?php require('config/database.php');
+
+$r = $db->query("SELECT * FROM blog  ORDER BY id desc LIMIT 3");
+?>
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- Mirrored from preview.colorlib.com/theme/unioncorp/blog-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 20 Apr 2021 22:06:29 GMT -->
 
 <head>
     <title>NGENDO || BLOGS</title>
@@ -12,14 +14,14 @@
 
 <body>
     <?php include 'partials/_menu.php' ?>
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_3.jpg');">
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('');">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text align-items-end justify-content-center">
                 <div class="col-md-9 text-center mb-5">
-                    <p class="breadcrumbs"><span class="me-2"><a href="index.html">Home <i
-                                    class="fa fa-chevron-right"></i></a></span> <span class="me-2"><a
-                                href="blog.html">Blog <i class="fa fa-chevron-right"></i></a></span> <span>Blog Single
+                    <p class="breadcrumbs"><span class="me-2"><a href="acceuil">Home <i
+                                    class="fa fa-chevron-right"></i></a></span> <span class="me-2"><a href="blog">Blog
+                                <i class="fa fa-chevron-right"></i></a></span> <span>Blog detail
                             <i class="fa fa-chevron-right"></i></span></p>
                     <h1 class="mb-0 bread">Blog Details</h1>
                 </div>
@@ -89,64 +91,8 @@
                                     <p><a href="#" class="reply">Reply</a></p>
                                 </div>
                             </li>
-                            <li class="comment">
-                                <div class="vcard bio">
-                                    <img src="images/person_1.jpg" alt="Image placeholder">
-                                </div>
-                                <div class="comment-body">
-                                    <h3>John Doe</h3>
-                                    <div class="meta">January 27, 2021 at 7:20am</div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum
-                                        necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim
-                                        sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                                    <p><a href="#" class="reply">Reply</a></p>
-                                </div>
-                                <ul class="children">
-                                    <li class="comment">
-                                        <div class="vcard bio">
-                                            <img src="images/person_1.jpg" alt="Image placeholder">
-                                        </div>
-                                        <div class="comment-body">
-                                            <h3>John Doe</h3>
-                                            <div class="meta">January 27, 2021 at 7:20am</div>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem
-                                                laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat
-                                                saepe enim sapiente iste iure! Quam voluptas earum impedit
-                                                necessitatibus, nihil?</p>
-                                            <p><a href="#" class="reply">Reply</a></p>
-                                        </div>
-                                        <ul class="children">
-                                            <li class="comment">
-                                                <div class="vcard bio">
-                                                    <img src="images/person_1.jpg" alt="Image placeholder">
-                                                </div>
-                                                <div class="comment-body">
-                                                    <h3>John Doe</h3>
-                                                    <div class="meta">January 27, 2021 at 7:20am</div>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                                        Pariatur quidem laborum necessitatibus, ipsam impedit vitae
-                                                        autem, eum officia, fugiat saepe enim sapiente iste iure! Quam
-                                                        voluptas earum impedit necessitatibus, nihil?</p>
-                                                    <p><a href="#" class="reply">Reply</a></p>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="comment">
-                                <div class="vcard bio">
-                                    <img src="images/person_1.jpg" alt="Image placeholder">
-                                </div>
-                                <div class="comment-body">
-                                    <h3>John Doe</h3>
-                                    <div class="meta">January 27, 2021 at 7:20am</div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum
-                                        necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim
-                                        sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                                    <p><a href="#" class="reply">Reply</a></p>
-                                </div>
-                            </li>
+
+
                         </ul>
 
                         <div class="comment-form-wrap pt-5">
@@ -198,60 +144,48 @@
                         </form>
                     </div>
                     <div class="sidebar-box">
-                        <h3>Our Services</h3>
+                        <h3>Nos Services</h3>
                         <ul class="categories me-md-4">
-                            <li><a href="#"><span class="ion-ios-arrow-round-forward"></span>Financial Planning</a></li>
-                            <li><a href="#"><span class="ion-ios-arrow-round-forward"></span>Investments Management</a>
+                            <li><a href="#"><span class="ion-ios-arrow-round-forward"></span>Saisie & impression</a>
                             </li>
-                            <li><a href="#"><span class="ion-ios-arrow-round-forward"></span>Business Loan</a></li>
-                            <li><a href="#"><span class="ion-ios-arrow-round-forward"></span>Taxes Consulting</a></li>
-                            <li><a href="#"><span class="ion-ios-arrow-round-forward"></span>Insurance Consulting</a>
+                            <li><a href="#"><span class="ion-ios-arrow-round-forward"></span> Creation site et
+                                    application sur mesure</a>
                             </li>
-                            <li><a href="#"><span class="ion-ios-arrow-round-forward"></span>Retirement Planning</a>
+                            <li><a href="#"><span class="ion-ios-arrow-round-forward"></span>Maintenance & depanage</a>
                             </li>
-                            <li><a href="#"><span class="ion-ios-arrow-round-forward"></span>Risk Management</a></li>
-                            <li><a href="#"><span class="ion-ios-arrow-round-forward"></span>Technology Consulting</a>
+                            <li><a href="#"><span class="ion-ios-arrow-round-forward"></span>Recyclage Cartouche</a>
+                            </li>
+                            <li><a href="#"><span class="ion-ios-arrow-round-forward"></span>Tirage livre</a>
+                            </li>
+                            <li><a href="#"><span class="ion-ios-arrow-round-forward"></span>Formation en
+                                    Informatique</a>
+                            </li>
+                            <li><a href="#"><span class="ion-ios-arrow-round-forward"></span>Connexion Wifi</a></li>
+                            <li><a href="#"><span class="ion-ios-arrow-round-forward"></span>Vente Appareils et
+                                    accessoirs informatique.</a>
                             </li>
                         </ul>
                     </div>
                     <div class="sidebar-box">
-                        <h3>Recent Blog</h3>
+                        <h3>Blog les plus recent</h3>
+                        <?php while ($o = $r->fetch()) { ?>
                         <div class="block-21 mb-4 d-flex">
-                            <a class="blog-img me-4" style="background-image: url(images/image_1.jpg);"></a>
+                            <a class="blog-img me-4"
+                                style="background-image: url(admin/blogs/<?= $o['avatar']; ?>);"></a>
                             <div class="text">
-                                <h3 class="heading"><a href="#">Incorporation is A Big Milestone for Your Business</a>
+                                <h3 class="heading"><a href="#"><?= $o['titre']; ?></a>
                                 </h3>
                                 <div class="meta">
-                                    <div><a href="#"><span class="fa fa-calendar"></span> January 27, 2021</a></div>
+                                    <div><a href="#"><span class="fa fa-calendar"></span> <?= $o['created_at']; ?></a>
+                                    </div>
                                     <div><a href="#"><span class="fa fa-user"></span> Admin</a></div>
-                                    <div><a href="#"><span class="fa fa-comment"></span> 19</a></div>
+                                    <div><a href="#"><span class="fa fa-comment"></span> 0</a></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="block-21 mb-4 d-flex">
-                            <a class="blog-img me-4" style="background-image: url(images/image_2.jpg);"></a>
-                            <div class="text">
-                                <h3 class="heading"><a href="#">Incorporation is A Big Milestone for Your Business</a>
-                                </h3>
-                                <div class="meta">
-                                    <div><a href="#"><span class="fa fa-calendar"></span> January 27, 2021</a></div>
-                                    <div><a href="#"><span class="fa fa-user"></span> Admin</a></div>
-                                    <div><a href="#"><span class="fa fa-comment"></span> 19</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="block-21 mb-4 d-flex">
-                            <a class="blog-img me-4" style="background-image: url(images/image_3.jpg);"></a>
-                            <div class="text">
-                                <h3 class="heading"><a href="#">Incorporation is A Big Milestone for Your Business</a>
-                                </h3>
-                                <div class="meta">
-                                    <div><a href="#"><span class="fa fa-calendar"></span> January 27, 2021</a></div>
-                                    <div><a href="#"><span class="fa fa-user"></span> Admin</a></div>
-                                    <div><a href="#"><span class="fa fa-comment"></span> 19</a></div>
-                                </div>
-                            </div>
-                        </div>
+                        <?php } ?>
+
+
                     </div>
                     <div class="sidebar-box">
                         <h3>Tag Cloud</h3>
@@ -277,27 +211,7 @@
             </div>
         </div>
     </section>
-    <section class="ftco-intro-2 img" style="background-image: url(images/bg_3.jpg);">
-        <div class="overlay"></div>
-        <div class="container-xl">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 col-xl-10">
-                    <div class="row" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="col-md-8 d-flex align-items-center">
-                            <div>
-                                <span class="subheading">Prepare for takeoff</span>
-                                <h1 class="mb-md-0 mb-4">Looking for business opportunity?</h1>
-                            </div>
-                        </div>
-                        <div class="col-md-4 d-flex align-items-center">
-                            <p class="mb-0"><a href="#" class="btn btn-white py-md-4 py-3 px-md-5 px-4">Get Started</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <?php include 'partials/_foot.php' ?>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/tiny-slider.js"></script>
