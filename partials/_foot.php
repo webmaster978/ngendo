@@ -59,7 +59,7 @@ $r = $db->query("SELECT * FROM blog  ORDER BY id desc LIMIT 2");
                             style="background-image: url(admin/blogs/<?= $o['avatar']; ?>);"></a>
                         <div class="text">
                             <div class="meta">
-                                <div><a href="#"><span class="fa fa-calendar"></span><?= $o['created_at']; ?></a></div>
+                                <div><a href="#"><span class="fa fa-calendar"></span> <?= $o['created_at']; ?></a></div>
                                 <div><a href="#"><span class="fa fa-user"></span> Admin</a></div>
                             </div>
                             <h3 class="heading"><a href="#"><?= $o['titre']; ?></a></h3>

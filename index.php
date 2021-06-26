@@ -116,9 +116,9 @@ $bb = $db->query("SELECT * FROM blog  ORDER BY id desc LIMIT 4");
             </div>
             <div class="row g-0">
                 <div class="col-md-3" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-                    <a href="images/gallery-1.jpg"
+                    <a href="images/one.jpg"
                         class="gallery-wrap img d-flex align-items-end justify-content-center glightbox"
-                        style="background-image: url(images/gallery-1.jpg);">
+                        style="background-image: url(images/one.jpg);">
                         <div class="icon d-flex align-items-center justify-content-center"><span
                                 class="fa fa-search"></span></div>
                         <div class="text">
@@ -169,7 +169,7 @@ $bb = $db->query("SELECT * FROM blog  ORDER BY id desc LIMIT 4");
                 <div class="col-md-6 heading-section heading-section-white text-center mb-5" data-aos="fade-up"
                     data-aos-duration="1000">
                     <span class="subheading">Great Reviews for our services</span>
-                    <h2 class="mb-0">Technical Statistics</h2>
+                    <h2 class="mb-0">Statistic technique</h2>
                 </div>
             </div>
             <div class="row section-counter">
