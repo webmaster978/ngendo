@@ -47,7 +47,20 @@ $r = $db->query("SELECT * FROM blog  ORDER BY id desc LIMIT 3");
                                         <span><a href="#"><i class="fa fa-comment me-1"></i> 0 Comments</a></span>
                                     </p>
                                     <h3 class="heading mb-3"><a href="#"><?= $g['titre']; ?></a></h3>
-                                    <p><?= $g['contenue']; ?></p>
+
+                                    <?php
+                                        $description = $g['contenue'];
+                                        if (strlen($description) > 100) {
+                                            $apercu_description = substr($description, 0, 100);
+                                            echo $apercu_description . " . . .";
+                                        } else {
+
+                                            echo $description;
+                                        }
+
+
+                                        ?>
+                                    <br>
                                     <a href="blog-detail" class="btn btn-primary">Voir plus</a>
                                 </div>
                             </div>
