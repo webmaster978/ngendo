@@ -28,12 +28,24 @@ $r = $db->query("SELECT * FROM blog  ORDER BY id desc LIMIT 3");
             </div>
         </div>
     </section>
+    <?php
+
+    require 'config/database.php';
+    $id = $_GET['id'];
+    $req = $db->prepare('SELECT * FROM blog WHERE id = ?');
+    $req->execute(array($id));
+
+
+    ?>
+
     <section class="ftco-section">
         <div class="container">
             <div class="row g-lg-5">
+                <?php while ($g = $req->fetch()) { ?>
                 <div class="col-lg-8">
+
                     <p>
-                        <img src="images/image_7.jpg" alt="" class="img-fluid">
+                        <img src="admin/blogs/<?= $g['avatar']; ?>" alt="" class="img-fluid">
                     </p>
                     <h2 class="mb-3">Incorporation is A Big Milestone for Your Business</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, eius mollitia suscipit,
@@ -134,6 +146,7 @@ $r = $db->query("SELECT * FROM blog  ORDER BY id desc LIMIT 3");
                         </div>
                     </div>
                 </div>
+                <?php } ?>
                 <div class="col-lg-4 sidebar pl-md-4">
                     <div class="sidebar-box bg-light rounded">
                         <form action="#" class="search-form">
