@@ -61,7 +61,8 @@ $r = $db->query("SELECT * FROM blog  ORDER BY id desc LIMIT 3");
 
                                         ?>
                                     <br>
-                                    <a href="blog-detail" class="btn btn-primary">Voir plus</a>
+                                    <a href="blog-detail?id=<?php echo $g['id']; ?>" class="btn btn-primary">Voir
+                                        plus</a>
                                 </div>
                             </div>
                         </div>
