@@ -1,6 +1,9 @@
 <?php require('config/database.php');
 $s = $db->query("SELECT * FROM service");
 $bb = $db->query("SELECT * FROM blog  ORDER BY id desc LIMIT 4");
+$o['id'] = 1;
+$o['id'] = sha1(1);
+// $id = sha1(1);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -377,7 +380,7 @@ $bb = $db->query("SELECT * FROM blog  ORDER BY id desc LIMIT 4");
 
 
                                 ?>
-                            <a href="blog-detail"
+                            <a href="blog-detail?id=<?php echo $o['id']; ?>"
                                 class="btn-custom d-flex align-items-center justify-content-center"><span
                                     class="fa fa-link"></span></a>
                         </div>

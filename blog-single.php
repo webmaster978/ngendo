@@ -1,6 +1,8 @@
 <?php require('config/database.php');
 
 $r = $db->query("SELECT * FROM blog  ORDER BY id desc LIMIT 3");
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
