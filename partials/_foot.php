@@ -62,7 +62,8 @@ $r = $db->query("SELECT * FROM blog  ORDER BY id desc LIMIT 2");
                                 <div><a href="#"><span class="fa fa-calendar"></span> <?= $o['created_at']; ?></a></div>
                                 <div><a href="#"><span class="fa fa-user"></span> Admin</a></div>
                             </div>
-                            <h3 class="heading"><a href="#"><?= $o['titre']; ?></a></h3>
+                            <h3 class="heading"><a href="blog-detail?id=<?php echo $o['id']; ?>"><?= $o['titre']; ?></a>
+                            </h3>
                         </div>
                     </div>
                     <?php } ?>

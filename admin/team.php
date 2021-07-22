@@ -9,7 +9,8 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="dist/adminlte.min.css">
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
 
     <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
@@ -21,11 +22,8 @@
 <body class="hold-transition sidebar-mini layout-fixed layout-footer-fixed layout-navbar-fixed">
     <div class="wrapper">
         <!-- Navbar -->
-        <?php include 'part/_nav.php' ?>
-        <!-- /.navbar -->
 
-        <!-- Main Sidebar Container -->
-        <?php include 'part/_menu.php' ?>
+
         <div>
         </div>
         <br />
@@ -33,7 +31,7 @@
             <br />
             <div align="right">
                 <button type="button" id="add_button" data-toggle="modal" data-target="#userModal"
-                    class="btn btn-info btn-lg">Add</button>
+                    class="btn btn-info btn-lg">Nouveau</button>
             </div>
             <br /><br />
             <table id="user_data" class="table table-bordered table-striped">
