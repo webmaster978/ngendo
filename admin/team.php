@@ -1,3 +1,6 @@
+<?php require('part/_header.php');
+
+?>
 <html>
 
 <head>
@@ -9,7 +12,7 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="dist/adminlte.min.css">
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
     <link rel="stylesheet" href="dist/css/bootstrap.min.css">
 
     <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
@@ -22,30 +25,110 @@
 <body class="hold-transition sidebar-mini layout-fixed layout-footer-fixed layout-navbar-fixed">
     <div class="wrapper">
         <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="#" class="nav-link">Contact</a>
+                </li>
+            </ul>
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <!-- Navbar Search -->
+                <!-- Messages Dropdown Menu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#">
+                        <i class="far fa-comments"></i>
+                        <span class="badge badge-danger navbar-badge">0</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
 
 
-        <div>
-        </div>
-        <br />
-        <div class="table-responsive">
-            <br />
-            <div align="right">
-                <button type="button" id="add_button" data-toggle="modal" data-target="#userModal"
-                    class="btn btn-info btn-lg">Nouveau</button>
+
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item dropdown-footer">Comming soon</a>
+                    </div>
+                </li>
+                <!-- Notifications Dropdown Menu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#">
+                        <i class="far fa-bell"></i>
+                        <span class="badge badge-warning navbar-badge">0</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                        <span class="dropdown-item dropdown-header">Comming soon</span>
+                        <div class="dropdown-divider"></div>
+
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item dropdown-footer">Voir tout</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+                        <i class="fas fa-th-large"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <?php include 'part/_menu.php' ?>
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0">Services</h1>
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active">Services</li>
+                            </ol>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container-fluid -->
             </div>
-            <br /><br />
-            <table id="user_data" class="table table-bordered table-striped">
-                <thead>
-                    <tr>
-                        <th width="10%">Image</th>
-                        <th width="35%">First Name</th>
-                        <th width="35%">Last Name</th>
-                        <th width="10%">Edit</th>
-                        <th width="10%">Delete</th>
-                    </tr>
-                </thead>
-            </table>
 
+            <div>
+            </div>
+            <br />
+            <div class="table-responsive">
+                <br />
+                <div align="right">
+                    <button type="button" id="add_button" data-toggle="modal" data-target="#userModal"
+                        class="btn btn-info btn-lg">Nouveau</button>
+                </div>
+                <br /><br />
+                <table id="user_data" class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th width="10%">Image</th>
+                            <th width="35%">First Name</th>
+                            <th width="35%">Last Name</th>
+                            <th width="10%">Edit</th>
+                            <th width="10%">Delete</th>
+                        </tr>
+                    </thead>
+                </table>
+
+            </div>
         </div>
     </div>
 </body>
