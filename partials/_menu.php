@@ -13,7 +13,7 @@
             </div>
             <div class="col-md d-flex align-items-center mb-2 mb-md-0">
                 <div class="con">
-                    <p class="mb-0"><span class="fa fa-map-o"></span> Location: Q.Office,comm de karisimbi, Goma</p>
+                    <p class="mb-0"><span class="fa fa-map-o"></span> Location: Goma ville,Station tout jeune</p>
                 </div>
             </div>
             <div class="col-md d-flex justify-content-start justify-content-md-end align-items-center">
