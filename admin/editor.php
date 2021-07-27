@@ -8,18 +8,20 @@
     <title>ADMIN || NGENDO</title>
 
     <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"> -->
     <link rel="icon" type="images/png" href="../images/n.png">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="dist/css/style.css" type="image/x-icon">
     <!-- Theme style -->
     <link rel="stylesheet" href="dist/css/adminlte.min.css">
     <!-- summernote -->
-    <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+    <!-- <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css"> -->
+    <link rel="stylesheet" href="dist/sum.css">
     <!-- CodeMirror -->
-    <link rel="stylesheet" href="plugins/codemirror/codemirror.css">
-    <link rel="stylesheet" href="plugins/codemirror/theme/monokai.css">
+    <!-- <link rel="stylesheet" href="plugins/codemirror/codemirror.css">
+    <link rel="stylesheet" href="plugins/codemirror/theme/monokai.css"> -->
     <!-- SimpleMDE -->
     <link rel="stylesheet" href="plugins/simplemde/simplemde.min.css">
 </head>
@@ -78,11 +80,13 @@
                                     </div>
                                     <br>
                                     <input type="file" name="img" required>
-
-                                    <textarea class="form-control" name="contenue" rows="100" id="summernote" required>
-
-                                 </textarea>
                                     <br>
+                                    <textarea class="summernote" name="contenue" id="" cols="30" rows="10"></textarea>
+                                    <!-- <div class="summernote"></div> -->
+
+
+                                    <br>
+
                                     <input class="btn btn-primary" type="submit" value="Publier">
                                 </form>
                             </div>
@@ -115,27 +119,26 @@
     <!-- AdminLTE App -->
     <script src="dist/js/adminlte.min.js"></script>
     <!-- Summernote -->
-    <script src="plugins/summernote/summernote-bs4.min.js"></script>
+    <!-- <script src="plugins/summernote/summernote.min.js"></script> -->
+    <script src="dist/js/sum.js"></script>
     <!-- CodeMirror -->
-    <script src="plugins/codemirror/codemirror.js"></script>
+    <!-- <script src="plugins/codemirror/codemirror.js"></script>
     <script src="plugins/codemirror/mode/css/css.js"></script>
     <script src="plugins/codemirror/mode/xml/xml.js"></script>
-    <script src="plugins/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="plugins/codemirror/mode/htmlmixed/htmlmixed.js"></script> -->
     <!-- AdminLTE for demo purposes -->
     <script src="dist/js/demo.js"></script>
     <!-- Page specific script -->
     <script>
-    $(function() {
-        // Summernote
-        $('#summernote').summernote()
+    $(document).ready(function() {
+        $('.summernote').summernote({
+            height: 170,
+            whidth: 80,
 
-        // CodeMirror
-        CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
-            mode: "htmlmixed",
-            theme: "monokai"
         });
-    })
+    });
     </script>
+
 </body>
 
 </html>

@@ -38,8 +38,9 @@
                                         <div class="col-md-4">
                                             <div class="dbox w-100 d-flex align-items-start">
                                                 <div class="text">
-                                                    <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY
-                                                        10016</p>
+                                                    <p><span>Address:</span> Goma ville, Boulevard
+                                                        KANYAMUHANGA(Rond point signers) Station tout jeune 1 er Etage
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>

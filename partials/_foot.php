@@ -74,10 +74,10 @@ $r = $db->query("SELECT * FROM blog  ORDER BY id desc LIMIT 2");
                     <h2 class="ftco-heading-2">Avez-vous des questions</h2>
                     <div class="block-23 mb-3">
                         <ul>
-                            <li><span class="icon fa fa-map marker"></span><span class="text">203 Fake St. Mountain
-                                    View, San Francisco, California, USA</span></li>
-                            <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+2 392 3929
-                                        210</span></a></li>
+                            <li><span class="icon fa fa-map marker"></span><span class="text">Goma ville, Boulevard
+                                    KANYAMUHANGA(Rond point signers) Station tout jeune 1 er Etage</span></li>
+                            <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+243 991 758
+                                        604 <br>+243 853 477 21</span></a></li>
                             <li><a href="mailto:jtjoel11@gmail.com"><span class="icon fa fa-paper-plane"></span><span
                                         class="text"><span class="__cf_email__"
                                             data-cfemail="">jtjoel11@gmail.com</span></span></a>
@@ -94,13 +94,12 @@ $r = $db->query("SELECT * FROM blog  ORDER BY id desc LIMIT 2");
         <div class="container-xl">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <p class="mb-0" style="font-size: 14px;">Copyright &copy; 2020 -<script data-cfasync="false"
+                    <p class="mb-0" style="font-size: 14px;">Copyright &copy; Maison Ngendo 2020 -<script
+                            data-cfasync="false"
                             src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
                         <script>
                         document.write(new Date().getFullYear());
-                        </script> All rights reserved | This template is made with Ngendo <i
-                            class="fa fa-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com/"
-                            rel="nofollow noopener">Ngendo</a>
+                        </script>. All rights reserved </a>
                     </p>
                 </div>
             </div>

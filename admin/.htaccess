@@ -3,4 +3,4 @@ RewriteRule ^dashboard$ dashboard.php
 RewriteRule ^login$ index.php
 RewriteRule ^services$ services.php
 RewriteRule ^blog$ editor.php
-RewriteRule ^team$ team.php
+RewriteRule ^equipe$ equipe.php

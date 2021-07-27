@@ -1,5 +1,5 @@
 <?php require('part/_header.php');
-$s = $db->query('SELECT * FROM service');
+$t = $db->query('SELECT * FROM team');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,13 +51,13 @@ $s = $db->query('SELECT * FROM service');
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Services</h1>
+                            <h1 class="m-0">Equipe</h1>
                         </div>
                         <!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">Services</li>
+                                <li class="breadcrumb-item active">Equipe</li>
                             </ol>
                         </div>
                         <!-- /.col -->
@@ -81,20 +81,22 @@ $s = $db->query('SELECT * FROM service');
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
                                     <tr>
-                                        <th>Numero</th>
-                                        <th>Titre su service</th>
-                                        <th>Detail</th>
+
+                                        <th>Image</th>
+                                        <th>Nom</th>
+                                        <th>Titre</th>
+                                        <th>Parole</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
-                                <?php while ($g = $s->fetch()) { ?>
+                                <?php while ($g = $t->fetch()) { ?>
                                 <tbody>
                                     <tr>
                                         <div class="modal fade" id="modal-default<?= $g['id']; ?>">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h4 class="modal-title">Modofier les services</h4>
+                                                        <h4 class="modal-title">Modofier les membres de l'equipe</h4>
                                                         <button type="button" class="close" data-dismiss="modal"
                                                             aria-label="Close">
                                                             <span aria-hidden="true">&times;</span>
@@ -104,11 +106,14 @@ $s = $db->query('SELECT * FROM service');
                                                         <form action="" method="post">
                                                             <div class="form-control-groups">
                                                                 <input class="form-control" type="text" name=""
-                                                                    value="<?= $g['titre']; ?>">
+                                                                    value="<?= $g['nom']; ?>">
+                                                                </br>
+                                                                <input class="form-control" type="text" name=""
+                                                                    value="<?= $g['parole']; ?>">
                                                                 </br>
 
-                                                                <input class="form-control jt" type="text" name=""
-                                                                    value="<?= $g['designation']; ?>">
+                                                                <!-- <input class="form-control jt" type="text" name=""
+                                                                    value="<?= $g['designation']; ?>"> -->
                                                             </div>
                                                         </form>
                                                     </div>
@@ -122,10 +127,11 @@ $s = $db->query('SELECT * FROM service');
                                             </div>
                                             <!-- /.modal-dialog -->
                                         </div>
-                                        <td><?= $g['id']; ?></td>
-                                        <td><?= $g['titre']; ?>
+                                        <td><img class="jt" src="img/<?= $g['image']; ?>"></td>
+                                        <td><?= $g['nom']; ?>
                                         </td>
-                                        <td><?= $g['designation']; ?></td>
+                                        <td><?= $g['titre']; ?></td>
+                                        <td><?= $g['parole']; ?></td>
 
                                         <td><button type="button" class="btn btn-success" data-toggle="modal"
                                                 data-target="#modal-default<?= $g['id']; ?>">

@@ -1,7 +1,8 @@
-<link rel="preconnect" href="https://fonts.gstatic.com/">
+<!-- <link rel="preconnect" href="https://fonts.gstatic.com/"> -->
+<meta name="author" content="joel tsongo jtjoel11@gmail.com">
 <link rel="icon" type="images/png" href="images/n.png">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&amp;display=swap"
-    rel="stylesheet">
+<!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&amp;display=swap"
+    rel="stylesheet"> -->
 <link rel="stylesheet" href="css/font-awesome.min.css">
 <link rel="stylesheet" href="css/ionicons.min.css">
 <link rel="stylesheet" href="css/animate.css">

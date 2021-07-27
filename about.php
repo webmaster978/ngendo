@@ -1,3 +1,10 @@
+<?php require('config/database.php');
+
+$team = $db->query("SELECT * FROM team  ORDER BY id desc LIMIT 4");
+$o['id'] = 1;
+$o['id'] = sha1(1);
+// $id = sha1(1);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,125 +56,27 @@
             </div>
         </div>
     </section>
-    <section class="ftco-section testimony-section bg-light">
-        <div class="container-xl">
-            <div class="row justify-content-center pb-4">
-                <div class="col-lg-7 text-center heading-section" data-aos="fade-up" data-aos-duration="1000">
-                    <span class="subheading">Testimonial</span>
-                    <h2 class="mb-5">Happy Customers</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                    <div class="carousel-testimony">
-                        <div class="item">
-                            <div class="testimony-wrap">
-                                <div class="icon d-flex align-items-center justify-content-center"><span
-                                        class="fa fa-quote-left"></div>
-                                <div class="text">
-                                    <p class="mb-4">Far far away, behind the word mountains, far from the countries
-                                        Vokalia and Consonantia, there live the blind texts.</p>
-                                    <div class="d-flex align-items-center">
-                                        <div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
-                                        <div class="ps-3">
-                                            <p class="name">Roger Scott</p>
-                                            <span class="position">Marketing Manager</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimony-wrap">
-                                <div class="icon d-flex align-items-center justify-content-center"><span
-                                        class="fa fa-quote-left"></div>
-                                <div class="text">
-                                    <p class="mb-4">Far far away, behind the word mountains, far from the countries
-                                        Vokalia and Consonantia, there live the blind texts.</p>
-                                    <div class="d-flex align-items-center">
-                                        <div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
-                                        <div class="ps-3">
-                                            <p class="name">Roger Scott</p>
-                                            <span class="position">Marketing Manager</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimony-wrap">
-                                <div class="icon d-flex align-items-center justify-content-center"><span
-                                        class="fa fa-quote-left"></div>
-                                <div class="text">
-                                    <p class="mb-4">Far far away, behind the word mountains, far from the countries
-                                        Vokalia and Consonantia, there live the blind texts.</p>
-                                    <div class="d-flex align-items-center">
-                                        <div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
-                                        <div class="ps-3">
-                                            <p class="name">Roger Scott</p>
-                                            <span class="position">Marketing Manager</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimony-wrap">
-                                <div class="icon d-flex align-items-center justify-content-center"><span
-                                        class="fa fa-quote-left"></div>
-                                <div class="text">
-                                    <p class="mb-4">Far far away, behind the word mountains, far from the countries
-                                        Vokalia and Consonantia, there live the blind texts.</p>
-                                    <div class="d-flex align-items-center">
-                                        <div class="user-img" style="background-image: url(images/person_4.jpg)"></div>
-                                        <div class="ps-3">
-                                            <p class="name">Roger Scott</p>
-                                            <span class="position">Marketing Manager</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimony-wrap">
-                                <div class="icon d-flex align-items-center justify-content-center"><span
-                                        class="fa fa-quote-left"></div>
-                                <div class="text">
-                                    <p class="mb-4">Far far away, behind the word mountains, far from the countries
-                                        Vokalia and Consonantia, there live the blind texts.</p>
-                                    <div class="d-flex align-items-center">
-                                        <div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
-                                        <div class="ps-3">
-                                            <p class="name">Roger Scott</p>
-                                            <span class="position">Marketing Manager</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <section class="ftco-section">
         <div class="container">
             <div class="row justify-content-center pb-4">
                 <div class="col-lg-7 text-center heading-section" data-aos="fade-up" data-aos-duration="1000">
-                    <span class="subheading">Meet Our Brilliant Minds</span>
-                    <h2 class="mb-5">Our Leadership Team</h2>
+                    <!-- <span class="subheading">Meet Our Brilliant Minds</span> -->
+                    <h2 class="mb-5">Notre equipe</h2>
                 </div>
             </div>
             <div class="row">
+                <?php while ($t = $team->fetch()) { ?>
                 <div class="col-md-6 col-lg-3" data-aos="flip-right" data-aos-delay="100" data-aos-duration="1000">
                     <div class="staff">
                         <div class="img-wrap d-flex align-items-stretch">
-                            <div class="img align-self-stretch" style="background-image: url(images/staff-1.jpg);">
+                            <div class="img align-self-stretch"
+                                style="background-image: url(admin/img/<?= $t['image']; ?>);">
                             </div>
                         </div>
+
                         <div class="text text-center">
-                            <h3 class="mb-2">Jason Smith</h3>
-                            <span class="position mb-2">President &amp; CEO</span>
+                            <h3 class="mb-2"><?= $t['nom']; ?></h3>
+                            <span class="position mb-2"><?= $t['titre']; ?></span>
                             <div class="faded">
                                 <ul class="ftco-social text-center">
                                     <li class="ftco-animate"><a href="#"
@@ -183,214 +92,13 @@
                                             class="d-flex align-items-center justify-content-center"><span
                                                 class="fa fa-instagram"></span></a></li>
                                 </ul>
-                                <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
+                                <p><?= $t['parole']; ?></p>
                             </div>
                         </div>
+
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3" data-aos="flip-right" data-aos-delay="100" data-aos-duration="1000">
-                    <div class="staff">
-                        <div class="img-wrap d-flex align-items-stretch">
-                            <div class="img align-self-stretch" style="background-image: url(images/staff-2.jpg);">
-                            </div>
-                        </div>
-                        <div class="text text-center">
-                            <h3 class="mb-2">Jeffrey Rockenson</h3>
-                            <span class="position mb-2">Executive Vice President</span>
-                            <div class="faded">
-                                <ul class="ftco-social text-center">
-                                    <li class="ftco-animate"><a href="#"
-                                            class="d-flex align-items-center justify-content-center"><span
-                                                class="fa fa-twitter"></span></a></li>
-                                    <li class="ftco-animate"><a href="#"
-                                            class="d-flex align-items-center justify-content-center"><span
-                                                class="fa fa-facebook"></span></a></li>
-                                    <li class="ftco-animate"><a href="#"
-                                            class="d-flex align-items-center justify-content-center"><span
-                                                class="fa fa-google"></span></a></li>
-                                    <li class="ftco-animate"><a href="#"
-                                            class="d-flex align-items-center justify-content-center"><span
-                                                class="fa fa-instagram"></span></a></li>
-                                </ul>
-                                <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3" data-aos="flip-right" data-aos-delay="100" data-aos-duration="1000">
-                    <div class="staff">
-                        <div class="img-wrap d-flex align-items-stretch">
-                            <div class="img align-self-stretch" style="background-image: url(images/staff-3.jpg);">
-                            </div>
-                        </div>
-                        <div class="text text-center">
-                            <h3 class="mb-2">Jason Smith</h3>
-                            <span class="position mb-2">General Manager</span>
-                            <div class="faded">
-                                <ul class="ftco-social text-center">
-                                    <li class="ftco-animate"><a href="#"
-                                            class="d-flex align-items-center justify-content-center"><span
-                                                class="fa fa-twitter"></span></a></li>
-                                    <li class="ftco-animate"><a href="#"
-                                            class="d-flex align-items-center justify-content-center"><span
-                                                class="fa fa-facebook"></span></a></li>
-                                    <li class="ftco-animate"><a href="#"
-                                            class="d-flex align-items-center justify-content-center"><span
-                                                class="fa fa-google"></span></a></li>
-                                    <li class="ftco-animate"><a href="#"
-                                            class="d-flex align-items-center justify-content-center"><span
-                                                class="fa fa-instagram"></span></a></li>
-                                </ul>
-                                <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3" data-aos="flip-right" data-aos-delay="100" data-aos-duration="1000">
-                    <div class="staff">
-                        <div class="img-wrap d-flex align-items-stretch">
-                            <div class="img align-self-stretch" style="background-image: url(images/staff-4.jpg);">
-                            </div>
-                        </div>
-                        <div class="text text-center">
-                            <h3 class="mb-2">Jason Smith</h3>
-                            <span class="position mb-2">Strategic Consultant</span>
-                            <div class="faded">
-                                <ul class="ftco-social text-center">
-                                    <li class="ftco-animate"><a href="#"
-                                            class="d-flex align-items-center justify-content-center"><span
-                                                class="fa fa-twitter"></span></a></li>
-                                    <li class="ftco-animate"><a href="#"
-                                            class="d-flex align-items-center justify-content-center"><span
-                                                class="fa fa-facebook"></span></a></li>
-                                    <li class="ftco-animate"><a href="#"
-                                            class="d-flex align-items-center justify-content-center"><span
-                                                class="fa fa-google"></span></a></li>
-                                    <li class="ftco-animate"><a href="#"
-                                            class="d-flex align-items-center justify-content-center"><span
-                                                class="fa fa-instagram"></span></a></li>
-                                </ul>
-                                <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3" data-aos="flip-right" data-aos-delay="100" data-aos-duration="1000">
-                    <div class="staff">
-                        <div class="img-wrap d-flex align-items-stretch">
-                            <div class="img align-self-stretch" style="background-image: url(images/staff-5.jpg);">
-                            </div>
-                        </div>
-                        <div class="text text-center">
-                            <h3 class="mb-2">Jason Smith</h3>
-                            <span class="position mb-2">President &amp; CEO</span>
-                            <div class="faded">
-                                <ul class="ftco-social text-center">
-                                    <li class="ftco-animate"><a href="#"
-                                            class="d-flex align-items-center justify-content-center"><span
-                                                class="fa fa-twitter"></span></a></li>
-                                    <li class="ftco-animate"><a href="#"
-                                            class="d-flex align-items-center justify-content-center"><span
-                                                class="fa fa-facebook"></span></a></li>
-                                    <li class="ftco-animate"><a href="#"
-                                            class="d-flex align-items-center justify-content-center"><span
-                                                class="fa fa-google"></span></a></li>
-                                    <li class="ftco-animate"><a href="#"
-                                            class="d-flex align-items-center justify-content-center"><span
-                                                class="fa fa-instagram"></span></a></li>
-                                </ul>
-                                <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3" data-aos="flip-right" data-aos-delay="100" data-aos-duration="1000">
-                    <div class="staff">
-                        <div class="img-wrap d-flex align-items-stretch">
-                            <div class="img align-self-stretch" style="background-image: url(images/staff-6.jpg);">
-                            </div>
-                        </div>
-                        <div class="text text-center">
-                            <h3 class="mb-2">Jeffrey Rockenson</h3>
-                            <span class="position mb-2">Executive Vice President</span>
-                            <div class="faded">
-                                <ul class="ftco-social text-center">
-                                    <li class="ftco-animate"><a href="#"
-                                            class="d-flex align-items-center justify-content-center"><span
-                                                class="fa fa-twitter"></span></a></li>
-                                    <li class="ftco-animate"><a href="#"
-                                            class="d-flex align-items-center justify-content-center"><span
-                                                class="fa fa-facebook"></span></a></li>
-                                    <li class="ftco-animate"><a href="#"
-                                            class="d-flex align-items-center justify-content-center"><span
-                                                class="fa fa-google"></span></a></li>
-                                    <li class="ftco-animate"><a href="#"
-                                            class="d-flex align-items-center justify-content-center"><span
-                                                class="fa fa-instagram"></span></a></li>
-                                </ul>
-                                <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3" data-aos="flip-right" data-aos-delay="100" data-aos-duration="1000">
-                    <div class="staff">
-                        <div class="img-wrap d-flex align-items-stretch">
-                            <div class="img align-self-stretch" style="background-image: url(images/staff-7.jpg);">
-                            </div>
-                        </div>
-                        <div class="text text-center">
-                            <h3 class="mb-2">Jason Smith</h3>
-                            <span class="position mb-2">General Manager</span>
-                            <div class="faded">
-                                <ul class="ftco-social text-center">
-                                    <li class="ftco-animate"><a href="#"
-                                            class="d-flex align-items-center justify-content-center"><span
-                                                class="fa fa-twitter"></span></a></li>
-                                    <li class="ftco-animate"><a href="#"
-                                            class="d-flex align-items-center justify-content-center"><span
-                                                class="fa fa-facebook"></span></a></li>
-                                    <li class="ftco-animate"><a href="#"
-                                            class="d-flex align-items-center justify-content-center"><span
-                                                class="fa fa-google"></span></a></li>
-                                    <li class="ftco-animate"><a href="#"
-                                            class="d-flex align-items-center justify-content-center"><span
-                                                class="fa fa-instagram"></span></a></li>
-                                </ul>
-                                <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3" data-aos="flip-right" data-aos-delay="100" data-aos-duration="1000">
-                    <div class="staff">
-                        <div class="img-wrap d-flex align-items-stretch">
-                            <div class="img align-self-stretch" style="background-image: url(images/staff-8.jpg);">
-                            </div>
-                        </div>
-                        <div class="text text-center">
-                            <h3 class="mb-2">Jason Smith</h3>
-                            <span class="position mb-2">Strategic Consultant</span>
-                            <div class="faded">
-                                <ul class="ftco-social text-center">
-                                    <li class="ftco-animate"><a href="#"
-                                            class="d-flex align-items-center justify-content-center"><span
-                                                class="fa fa-twitter"></span></a></li>
-                                    <li class="ftco-animate"><a href="#"
-                                            class="d-flex align-items-center justify-content-center"><span
-                                                class="fa fa-facebook"></span></a></li>
-                                    <li class="ftco-animate"><a href="#"
-                                            class="d-flex align-items-center justify-content-center"><span
-                                                class="fa fa-google"></span></a></li>
-                                    <li class="ftco-animate"><a href="#"
-                                            class="d-flex align-items-center justify-content-center"><span
-                                                class="fa fa-instagram"></span></a></li>
-                                </ul>
-                                <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php } ?>
             </div>
         </div>
     </section>
