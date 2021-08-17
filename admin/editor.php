@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="dist/css/adminlte.min.css">
     <!-- summernote -->
     <!-- <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css"> -->
-
+    <link href="summernote/summernote.min.css" rel="stylesheet">
     <!-- CodeMirror -->
     <!-- <link rel="stylesheet" href="plugins/codemirror/codemirror.css">
     <link rel="stylesheet" href="plugins/codemirror/theme/monokai.css"> -->
@@ -91,17 +91,9 @@
                                                     name="editordata"></textarea>
                                             </div>
 
-                                            <button class="btn btn-primary btn-block" id="submit-post">Post</button>
-
-
-
-
-
                                         </div>
 
                                     </div>
-
-
                                     <br>
 
                                     <input class="btn btn-primary" type="submit" value="Publier">
@@ -135,6 +127,15 @@
     <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
     <script src="dist/js/adminlte.min.js"></script>
+
+
+    <!-- suu new -->
+
+    <script src="popper.js"></script>
+    <script src="bootstrap.js"></script>
+    <script src="summernote/summernote.min.js"></script>
+    <script src="main.js"></script>
+    <!-- suu -->
     <!-- Summernote -->
     <!-- <script src="plugins/summernote/summernote.min.js"></script> -->
 
