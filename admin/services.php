@@ -87,8 +87,9 @@ $s = $db->query('SELECT * FROM service');
                                         <th>Action</th>
                                     </tr>
                                 </thead>
-                                <?php while ($g = $s->fetch()) { ?>
+
                                 <tbody>
+                                    <?php while ($g = $s->fetch()) { ?>
                                     <tr>
                                         <div class="modal fade" id="modal-default<?= $g['id']; ?>">
                                             <div class="modal-dialog">
@@ -132,8 +133,9 @@ $s = $db->query('SELECT * FROM service');
                                                 Modifier
                                             </button></td>
                                     </tr>
+                                    <?php } ?>
                                 </tbody>
-                                <?php } ?>
+                                
 
                             </table>
                         </div>
