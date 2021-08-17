@@ -5,7 +5,7 @@ function imgup()
 
     $url_img = basename($_FILES['img']['name']);
     $titre = htmlspecialchars($_POST['titre']);
-    $contenue = htmlspecialchars($_POST['cont']);
+    $contenue = htmlspecialchars_decode($_POST['cont']);
 
 
     $verif_img = getimagesize($_FILES['img']['tmp_name']);
