@@ -66,7 +66,48 @@
 
                                 </h3>
                             </div>
-                            <!-- /.card-header -->
+
+                            <?php
+                if(isset($_GET['effectuer'])){
+                    $eff = $_GET['effectuer '];
+                    if($eff ==1 || $eff ==2)
+                       
+                   ?>
+
+
+                            <script type="text/javascript">
+                            let timerInterval
+                            Swal.fire({
+                                title: 'Message envoyer avec succes',
+                                html: 'Merci de votre confiance',
+                                timer: 2000,
+                                timerProgressBar: true,
+                                willOpen: () => {
+                                    Swal.showLoading()
+                                    timerInterval = setInterval(() => {
+                                        const content = Swal.getContent()
+                                        if (content) {
+                                            const b = content.querySelector('b')
+                                            if (b) {
+                                                b.textContent = Swal.getTimerLeft()
+                                            }
+                                        }
+                                    }, 100)
+                                },
+                                onClose: () => {
+                                    clearInterval(timerInterval)
+                                }
+                            }).then((result) => {
+                                /* Read more about handling dismissals below */
+                                if (result.dismiss === Swal.DismissReason.timer) {
+                                    console.log('I was closed by the timer')
+                                }
+                            })
+                            </script>
+                            <?php 
+                }
+
+                ?>
 
                             <div class="card-body">
                                 <form action="i.php" method="post" enctype="multipart/form-data">
