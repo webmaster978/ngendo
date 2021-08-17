@@ -31,7 +31,7 @@ function imgup()
 
 
 
-                    echo 'valide';
+                    header('location:editor?effectuer=0');
                     return true;
                 }
             }
