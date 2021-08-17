@@ -81,19 +81,15 @@
                                     <br>
                                     <input type="file" name="img" required>
                                     <br>
-                                    <div class="row">
-                                        <div class="starter-template mt-5 col-lg-12">
 
 
 
-                                            <div class="form-group mb-3">
-                                                <textarea id="summernote" class="form-control"
-                                                    name="editordata"></textarea>
-                                            </div>
 
-                                        </div>
-
+                                    <div class="form-group mb-3">
+                                        <textarea id="summernote" class="form-control" name="cont"></textarea>
                                     </div>
+
+
                                     <br>
 
                                     <input class="btn btn-primary" type="submit" value="Publier">
