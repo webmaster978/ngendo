@@ -89,8 +89,9 @@ $t = $db->query('SELECT * FROM team');
                                         <th>Action</th>
                                     </tr>
                                 </thead>
-                                <?php while ($g = $t->fetch()) { ?>
+
                                 <tbody>
+                                    <?php while ($g = $t->fetch()) { ?>
                                     <tr>
                                         <div class="modal fade" id="modal-default<?= $g['id']; ?>">
                                             <div class="modal-dialog">
@@ -138,8 +139,9 @@ $t = $db->query('SELECT * FROM team');
                                                 Modifier
                                             </button></td>
                                     </tr>
+                                    <?php } ?>
                                 </tbody>
-                                <?php } ?>
+
 
                             </table>
                         </div>

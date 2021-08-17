@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="dist/css/adminlte.min.css">
     <!-- summernote -->
     <!-- <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css"> -->
-    <link rel="stylesheet" href="dist/sum.css">
+
     <!-- CodeMirror -->
     <!-- <link rel="stylesheet" href="plugins/codemirror/codemirror.css">
     <link rel="stylesheet" href="plugins/codemirror/theme/monokai.css"> -->
@@ -81,8 +81,25 @@
                                     <br>
                                     <input type="file" name="img" required>
                                     <br>
-                                    <textarea class="summernote" name="contenue" id="" cols="30" rows="10"></textarea>
-                                    <!-- <div class="summernote"></div> -->
+                                    <div class="row">
+                                        <div class="starter-template mt-5 col-lg-12">
+
+
+
+                                            <div class="form-group mb-3">
+                                                <textarea id="summernote" class="form-control"
+                                                    name="editordata"></textarea>
+                                            </div>
+
+                                            <button class="btn btn-primary btn-block" id="submit-post">Post</button>
+
+
+
+
+
+                                        </div>
+
+                                    </div>
 
 
                                     <br>
@@ -120,7 +137,7 @@
     <script src="dist/js/adminlte.min.js"></script>
     <!-- Summernote -->
     <!-- <script src="plugins/summernote/summernote.min.js"></script> -->
-    <script src="dist/js/sum.js"></script>
+
     <!-- CodeMirror -->
     <!-- <script src="plugins/codemirror/codemirror.js"></script>
     <script src="plugins/codemirror/mode/css/css.js"></script>
@@ -129,15 +146,7 @@
     <!-- AdminLTE for demo purposes -->
     <script src="dist/js/demo.js"></script>
     <!-- Page specific script -->
-    <script>
-    $(document).ready(function() {
-        $('.summernote').summernote({
-            height: 170,
-            whidth: 80,
 
-        });
-    });
-    </script>
 
 </body>
 

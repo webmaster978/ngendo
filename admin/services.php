@@ -135,7 +135,7 @@ $s = $db->query('SELECT * FROM service');
                                     </tr>
                                     <?php } ?>
                                 </tbody>
-                                
+
 
                             </table>
                         </div>
