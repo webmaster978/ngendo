@@ -74,7 +74,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/forms/validation.html" class="nav-link">
+                            <a href="ourblog" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Nos blogs</p>
                             </a>

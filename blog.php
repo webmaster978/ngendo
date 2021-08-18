@@ -1,5 +1,5 @@
 <?php require('config/database.php');
-$b = $db->query("SELECT * FROM blog ORDER BY id desc");
+$b = $db->query("SELECT * FROM blog ORDER BY id desc LIMIT 15");
 $r = $db->query("SELECT * FROM blog  ORDER BY id desc LIMIT 3");
 ?>
 <!DOCTYPE html>

@@ -4,3 +4,4 @@ RewriteRule ^login$ index.php
 RewriteRule ^services$ services.php
 RewriteRule ^blog$ editor.php
 RewriteRule ^equipe$ equipe.php
+RewriteRule ^ourblog$ ourblog.php

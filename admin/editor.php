@@ -70,7 +70,7 @@
                             <?php
                 if(isset($_GET['effectuer'])){
                     $eff = $_GET['effectuer '];
-                    if($eff ==1 || $eff ==2)
+                    if($eff ==0)
                        
                    ?>
 
