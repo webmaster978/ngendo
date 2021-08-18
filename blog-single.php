@@ -50,18 +50,14 @@ $r = $db->query("SELECT * FROM blog  ORDER BY id desc LIMIT 3");
                         <img src="admin/blogs/<?= $g['avatar']; ?>" alt="" class="img-fluid">
                     </p>
                     <h2 class="mb-3"><?= $g['titre']; ?></h2>
-                    <p>
+                    <p class="col-md-8">
                         <?= $g['contenue']; ?>
+                    </p>
 
 
 
 
-                    <div class="pt-5 mt-5">
 
-
-
-
-                    </div>
                 </div>
                 <?php } ?>
                 <div class="col-lg-4 sidebar pl-md-4">
