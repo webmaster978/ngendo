@@ -94,7 +94,7 @@ $t = $db->query('SELECT * FROM blog');
                                     <?php while ($g = $t->fetch()) { ?>
                                     <tr>
 
-                                        <td><img class="jt" src="img/<?= $g['avatar']; ?>"></td>
+                                        <td><img class="jt" src="blogs/<?= $g['avatar']; ?>"></td>
 
                                         </td>
                                         <td><?= $g['titre']; ?></td>
