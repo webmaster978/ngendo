@@ -31,7 +31,7 @@ function imgup()
 
 
 
-                    header('location:blog?effectuer');
+                    header('location:blog?effectuer=0');
                     return true;
                 }
             }
