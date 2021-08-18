@@ -90,10 +90,41 @@
                         <i class="fas fa-expand-arrows-alt"></i>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-                        <i class="fas fa-th-large"></i>
+                <li class="dropdown user user-menu">
+                    <!-- Menu Toggle Button -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <!-- The user image in the navbar-->
+                        <img src="img/undraw_profile.svg" class="user-image" alt="User Image">
+                        <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                        <span class="hidden-xs"><?php
+                                            if ($_SESSION['user']['username'] !== array()) {
+                                                $users = $_SESSION['user']['username'];
+
+                                                echo "$users";
+                                            }
+                                            ?></span>
                     </a>
+                    <ul class="dropdown-menu">
+                        <!-- The user image in the menu -->
+                        <li class="user-header">
+                            <img src="img/undraw_profile.svg" class="img-circle" alt="User Image">
+
+                            <p>
+                                <?php  echo "$users"; ?> - Admin
+
+                            </p>
+                        </li>
+                        <!-- Menu Body -->
+
+                        <!-- Menu Footer-->
+                        <li class="user-footer">
+                            <div class="pull-left">
+                                <a style="margin-left:30%;" href="logout.php"
+                                    class="btn btn-danger btn-flat">Deconnexion</a>
+                            </div>
+
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </nav>
